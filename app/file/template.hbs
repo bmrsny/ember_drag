@@ -1,0 +1,21 @@
+<h3>FILES</h3>
+{{#each model as |file|}}
+  {{#if file.inFolder}}
+    {{#draggable-file file=file}}
+      <div class="fileid">{{file.id}}</div>
+    {{/draggable-file}}
+  {{/if}}
+{{/each}}
+
+<br>
+  {{trash-can file=model}}
+<br>
+
+
+<div>Files in Trash</div>
+{{#each model as |file|}}
+  {{#unless file.inFolder}}
+   <li>{{file.name}}</li>  
+  {{/unless}}
+{{/each}}
+{{outlet}}
