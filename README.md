@@ -1,4 +1,6 @@
 # Ember-drag
+Drag and Drop Items to a Trash Can.
+Practice with ember components and data down, actions up
 
 This README outlines the details of collaborating on this Ember application.
 A short introduction of this app could easily go here.
