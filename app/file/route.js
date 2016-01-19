@@ -7,12 +7,6 @@ export default Ember.Route.extend({
 
     actions : {
       removeFile: function(file_id){
-        // var file = this.store.query('file', file_id);
-        // var file =  this.store.query('file', file_id);
-        // file.inFolder = false;
-        // file.save();
-
-
        this.store.findRecord('file', file_id).then((file) => {
         console.log(file);
         console.log(file.id);
