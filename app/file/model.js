@@ -2,8 +2,8 @@ import DS from 'ember-data';
 
 var File =  DS.Model.extend({
   name: DS.attr('string'),
-  // inFolder: DS.attr('boolean', {defaultValue: true}),
-  inFolder: DS.attr('boolean'),
+  inFolder: DS.attr('boolean', {defaultValue: true}),
+  // inFolder: DS.attr('boolean'),
 });
 
 File.reopenClass({
