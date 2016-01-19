@@ -6,14 +6,13 @@ export default Ember.Component.extend({
   },
 
   drop: function(e){
-    // var file = this.get('file');
     var id = e.dataTransfer.getData('text/data');
-    var record = this.get('file').findProperty('id');
-    // var record = this.store.find('file', 'id');
-    console.log(record);
-    // this.get('inTrash').pushObject(record);
-    record.set("inFolder", false)
-    // this.get('inFolder').removeObject(record);
-
+    var record = this.get('file').findBy('id');
+    record.set("inFolder", false).save().then(() => {
+      console.log('save successful');
+      // this.refresh();
+    }, function() {
+      console.log('save failed')
+    });
   }
 });
