@@ -1,9 +1,7 @@
 <h3>FILES</h3>
 {{#each model as |file|}}
   {{#if file.inFolder}}
-    {{#draggable-file file=file}}
-      <div class="fileid">{{file.id}}</div>
-    {{/draggable-file}}
+    {{draggable-file file=file}}
   {{/if}}
 {{/each}}
 
